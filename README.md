@@ -36,6 +36,26 @@ src/
 
 ---
 
+## 🧠 Architecture
+
+This project follows the principles of **OOP**, **Clean Code** and **SOLID** to ensure maintainability, scalability, and testability.
+
+### 🔹 Responsibilities by Layer
+
+- **model/**: Core domain (Rover, Position, Direction, Plateau)
+- **command/**: Follows the **Command Pattern** to encapsulate movement logic
+- **parser/**: Translates the input file into domain objects
+- **service/**: (if added) Orchestrates the business logic (currently optional)
+- **Main.java**: Entry point that ties everything together
+
+### 📐 Class Diagram
+
+The following class diagram illustrates the key components and their relationships:
+
+![Class Diagram](./docs/marsrover-classdiagram.png)
+
+---
+
 ## 🛠️ Technologies Used
 
 - Java 21+ (compatible with Java 24)
