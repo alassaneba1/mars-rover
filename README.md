@@ -57,7 +57,7 @@ This project follows the principles of **OOP**, **Clean Code** and **SOLID** to 
 
 The following class diagram illustrates the key components and their relationships:
 
-![Class Diagram](./docs/marsrover-classdiagram.png)
+![Class Diagram](./docs/marsrover-class-diagram.png)
 
 ---
 
