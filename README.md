@@ -1,5 +1,5 @@
 ![Java](https://img.shields.io/badge/Java-21%2B-blue?logo=java)
-![Maven](https://img.shields.io/badge/Maven-Build-success-brightgreen?logo=apache-maven)
+![Maven](https://img.shields.io/badge/Built%20with-Maven-C71A36?logo=apache-maven)
 ![JUnit](https://img.shields.io/badge/Tested%20with-JUnit%205-25A162?logo=testing-library)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
