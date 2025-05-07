@@ -81,7 +81,7 @@ mvn clean package
 ### 2. Run the program with the input file
 
 ```bash
-java -jar target/mars-rover-1.0-SNAPSHOT.jar src/main/resources/input.txt
+java -jar target/rover.jar src/main/resources/input.txt
 ```
 
 ---
