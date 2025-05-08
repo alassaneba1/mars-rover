@@ -33,7 +33,7 @@ public class InputParser {
             throw new IllegalArgumentException("Invalid input format");
 
         // Plateau size
-        String[] plateauParts = lines.get(0).split(" ");
+        String[] plateauParts = lines.getFirst().split(" ");
         int maxX = Integer.parseInt(plateauParts[0]);
         int maxY = Integer.parseInt(plateauParts[1]);
         Plateau plateau = new Plateau(maxX, maxY);
