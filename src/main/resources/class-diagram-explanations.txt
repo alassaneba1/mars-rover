@@ -1,0 +1,54 @@
+Pour modéliser proprement l'exercice Mars Rover,
+j'ai choisi une architecture orientée objet, claire, testable et respectant les principes SOLID.
+Voici un diagramme de classes qui illustre les différents composants de mon application."
+
+🧩 Structure et responsabilités des classes
+Main
+C’est le point d’entrée de l’application. Il lit le fichier passé en paramètre et délègue l’analyse à la classe InputParser.
+
+- InputParser :
+    Elle est responsable de la lecture du fichier d’entrée :
+        elle extrait la taille du plateau,
+        Les positions initiales des rovers,
+        Et leurs instructions.
+        Cette séparation permet de respecter le principe de responsabilité unique.
+
+- Plateau :
+Représente la grille. Elle encapsule les dimensions maxX et maxY et fournit une méthode isWithinBounds pour valider les positions.
+➤ Cela garantit que les rovers ne sortent pas de la surface autorisée.
+
+- Position :
+    Représente les coordonnées (x, y) ainsi que l’orientation (Direction).
+    Elle est immuable, ce qui permet une gestion sûre et prévisible des états.
+    Elle propose aussi des méthodes pour avancer ou tourner à gauche/droite.
+
+- Direction (Enum) :
+    Gère les quatre directions cardinales (N, E, S, W).
+    Chaque direction sait comment tourner à gauche ou à droite et comment se déplacer.
+
+- Rover :
+    Contient sa Position actuelle et une référence au Plateau.
+    Il peut exécuter une commande à la fois (Command) ou une liste de commandes.
+    Ce modèle suit le principe Open/Closed : on peut ajouter de nouvelles commandes sans modifier cette classe.
+
+- Command (interface) :
+    J’ai appliqué ici le Design Pattern Command.
+    Chaque instruction (L, R, M) est encapsulée dans une implémentation concrète
+     – MoveCommand
+     - TurnLeftCommand
+     - TurnRightCommand
+➤ Cela rend le code extensible et testable indépendamment.
+
+- CommandParser :
+    Convertit une chaîne de caractères en une liste de Command.
+    Cela évite de mélanger parsing et exécution. On suit ici le principe de séparation des responsabilités.
+
+- RoverInstructions :
+    Regroupe un Rover et sa liste de Command correspondante.
+    Cela facilite l’orchestration par Main.
+
+✅ Pourquoi cette approche est efficace
+- Testabilité élevée : chaque composant peut être testé indépendamment.
+- Extensibilité : ajouter une nouvelle instruction ne nécessite pas de modifier le Rover.
+- Lisibilité & maintien : le respect de SOLID rend le code facile à maintenir à long terme.
+- Clarté du parcours de données : depuis le parsing jusqu'à l’exécution, chaque étape est clairement définie.

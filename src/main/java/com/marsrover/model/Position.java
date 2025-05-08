@@ -6,8 +6,6 @@ import lombok.Getter;
 /**
  * Represents a rover's immutable position (x, y) on the plateau,
  * along with its current facing direction.
- * <p>
- * Uses Lombok to generate constructor and getters.
  */
 @AllArgsConstructor
 @Getter
