@@ -107,4 +107,4 @@ MMRMMRMRRM
 
 ## 👨‍💻 Author
 
-Developed by Alassane BA for a technical interview with BNP Paribas.
+Alassane BA - Software Engineer
