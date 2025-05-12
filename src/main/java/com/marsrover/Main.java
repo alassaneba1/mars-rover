@@ -12,7 +12,7 @@ import java.util.Map;
  * Entry point of the Mars Rover simulation.
  * Expects one argument: the path to the input file.
  */
-public class Main {
+ public class Main {
 
     public static void main(String[] args) {
         if (args.length != 1) {
